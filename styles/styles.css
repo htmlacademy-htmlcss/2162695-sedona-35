@@ -19,11 +19,6 @@
 *::after {
   box-sizing: border-box;
 }
-li{
-  list-style-type: none;
-}
-
-
 
 body {
   display: flex;
@@ -36,21 +31,17 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+
 .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
 .logo-welcome {
   display: block;
   margin: 0 auto;
-}
-
-.reasons-description {
-  text-align: center;
-  width: 651px;
-  margin: 0 274px 90px 275px;
 }
 
 .reasons-card {
@@ -58,21 +49,25 @@ body {
   padding: 0;
   text-align: center;
   display: flex;
-
 }
+
 .reasons-content {
   width: 400px;
+  background-color: #82b3d3;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 92px 85px 111px 85px;
+  position: relative;
 }
+
 .reasons-content::after{
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  width: 60px;
   content: "";
+  position: absolute;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   align-self: center;
-  margin: 30px 0 30px 0;
-  order:0;
+  top:178px;
+  width: 60px;
 }
 
 .reasons-list {
@@ -80,7 +75,7 @@ body {
   padding: 0;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reasons-item {
@@ -89,32 +84,35 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 103px 85px 121px 85px;
+  position: relative;
 
 }
+
  .reasons-item::after{
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  width: 60px;
   content: "";
+  position: absolute;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   align-self: center;
-  margin: 30px 0 30px 0;
-  order:0;
+  top:189px;
+  width: 60px;
 }
+
+.reasons-title-more{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin:0 0 30px 0;
+}
+
 .reasons-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  width: 175px;
   text-align: center;
-  margin: 0 auto;
-  order:-1;
-}
-
-.reasons-more{
-  padding: 0;
-  margin:0 auto;
-  margin-top:30px;
-  margin-bottom: 30px;
+  margin:0 0 62px 0;
 }
 
 .reasons-item-description {
@@ -123,8 +121,6 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  order:1;
-
 }
 
 .reasons-list-more {
@@ -132,44 +128,51 @@ body {
   padding: 0;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
 }
+
 .reasons-item-more {
   width: 400px;
   display: flex;
   flex-direction: column;
-  padding: 80px 85px 81px 85px;
+  padding: 182px 85px 81px 85px;
+  position: relative;
 }
-.reasons-item-more:nth-child(1)::before{
+
+.reasons-item-more-house::before{
+  content: "";
+  position: absolute;
   background-image: url("../images/reasons-list-more-house.svg");
   background-repeat: no-repeat;
-  content: "";
   width: 75px;
   height: 72px;
-  align-self: center;
-  order:-2;
-  margin:0 auto;
+  left:50%;
+  top:80px;
+  transform: translateX(-50%);
 }
 
-.reasons-item-more:nth-child(2)::before{
+.reasons-item-more-food::before{
+  content: "";
+  position: absolute;
   background-image: url("../images/reasons-list-more-food.svg");
   background-repeat: no-repeat;
-  content: "";
   width: 74px;
   height: 70px;
-  align-self: center;
-  order:-2;
-  margin:0 auto;
+  left:50%;
+  top:81px;
+  transform: translateX(-50%);
 }
 
-.reasons-item-more:nth-child(3)::before{
+.reasons-item-more-souvenirs::before{
+  content: "";
+  position: absolute;
   background-image: url("../images/reasons-list-more-souvenirs.svg");
   background-repeat: no-repeat;
-  content: "";
   width: 64px;
   height: 76px;
-  align-self: center;
-  order:-2;
-  margin:0 auto;
+  left:50%;
+  top:78px;
+  transform: translateX(-50%);
 }
 
 .visually-hidden {
@@ -202,6 +205,7 @@ body {
   border-radius: 4px 0 0 4px;
   background-color: #f2f2f2;
 }
+
 .newsletter-form {
   display: flex;
   justify-content: center;
@@ -214,15 +218,13 @@ body {
   padding-left: 70px;
   padding-right: 70px;
   display: flex;
-
-
 }
 
 .navigation {
   width: 507px;
   display: flex;
-
 }
+
 .navigation-list {
   display: flex;
   list-style-type: none;
@@ -230,7 +232,6 @@ body {
   margin: 0;
   margin-left:28px ;
   padding: 0;
-
 }
 
 .navigation-item{
@@ -265,8 +266,8 @@ body {
   padding: 8px 34px 8px 34px;
   margin:21px 0 21px 0;
   border-radius: 4px;
-
 }
+
 .search-like-want{
   width: 268px;
   display: flex;
@@ -275,29 +276,28 @@ body {
   margin-left: 285px;
 }
 
-
 .intro {
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #5d676d;
   padding:51px 0 76px 0;
+  position: relative;
 }
 
 .intro::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  left:0;
+  bottom:0;
   background-image: url("../images/background-logo-bottom.svg") ;
   background-size: 1200px 57px;
-  position: absolute;
-  width: 1200px;
-  height: 57px;
-  content: "";
-  display: block;
-
 }
 
-.reasons{
-  padding: 0;
-  padding-top: 69px;
+.reasons-heading{
+  padding: 69px 274px 90px 275px;
 }
 
 .title {
@@ -306,25 +306,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  width: 620px;
-  margin: 0 auto;
-  padding-bottom: 25px;
+  margin: 0 0 25px 0;
 }
 
 .reasons-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  margin: 0 auto;
-  padding-bottom: 90px;
+  text-align: center;
+  margin:0;
 }
-
-.reasons-content {
-  background-color: #82b3d3;
-  color: #ffffff;
-}
-
-
 
 .reasons-card-description {
   font-size: 18px;
@@ -335,16 +326,6 @@ body {
   order:1;
 }
 
-.reasons-list li:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.reasons-list li:nth-child(even) {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-
-
 .reasons-item-more-description {
   font-size: 18px;
   line-height: 21px;
@@ -354,29 +335,23 @@ body {
   padding: 0;
 }
 
-.reasons-list-more li:nth-child(odd) {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
 .booking-title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  width: 297px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 0 20px 0;
 }
 
 .booking-description {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  width: 592px;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 54px;
+  margin:0 0 54px 0;
 }
+
 .booking {
   padding: 96px 304px 96px 304px;
   display: flex;
@@ -404,7 +379,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
+  margin:0 0 20px 0;
 }
 
 .newsletter-description {
@@ -412,10 +387,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   text-align: center;
-  width: 475px;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 54px;
+  margin: 0 0 54px 0;
 }
 
 .newsletter-button {
@@ -439,9 +411,8 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  width: 376px;
   padding: 8px 50px 8px 50px;
-  margin: 0 auto;
+  margin: 0 108px 0 108px;
   border-radius: 4px;
 }
 
@@ -458,15 +429,16 @@ body {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin:0;
+  margin:0 0 8px 0;
   padding: 0;
 }
 
 .breadcrumbs {
   color: #ffffff;
-  margin:0;
+  margin:0 0 40px 0;
   padding: 0;
   display:flex;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -482,28 +454,27 @@ body {
 
 .catalog-filter{
   display:flex;
-  padding-top: 40px;
 }
+
 .catalog-filter-group{
   margin:0;
   padding:0;
   border: none;
 
 }
-.catalog-filter-group:not(:nth-child(3)){
-   padding-right: 70px;
-   }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin:  0 32px 0 0;
   padding: 0;
 }
+
 .catalog-filter-list{
   margin:0;
   padding: 0;
+  list-style-type: none;
 }
 
 .catalog-filter-item {
@@ -513,22 +484,18 @@ body {
   margin:0;
 
 }
-.catalog-filter-item:not(:nth-child(3n)){
-  margin-bottom:16px;
-}
+
 .catalog-filter-price{
   margin: 0 70px 0 70px;
   width: 288px;
-
 }
 
 .button-catalog{
-  padding-top: 55px;
+  padding: 55px 0 0 0;
   display:flex;
   flex-direction: column;
-  width: 191px;
-
 }
+
 .button-apply{
 font-size: 16px;
 font-weight: 700;
@@ -539,8 +506,8 @@ text-transform: uppercase;
 line-height: 20px;
 border-radius: 4px;
 }
-.button-reset{
 
+.button-reset{
   margin:0;
   margin-top:40px;
   font-size: 16px;
@@ -551,6 +518,7 @@ border-radius: 4px;
   padding: 8px 50px 8px 50px;
   line-height: 20px;
 }
+
 .ínner-sort-block{
   padding: 50px 70px 40px 70px;
   margin: 0;
@@ -586,17 +554,15 @@ border-radius: 4px;
   margin: 0;
   padding: 0;
   display:flex;
-
 }
+
 .inner-buttons-item{
   margin: 0;
   padding: 0;
   min-width: 46px;
   height: 46px;
   border: solid 2px #E5E5E5;
-}
-.inner-buttons-item:not(:nth-child(3)){
-  margin-right: 8px;
+  list-style-type: none;
 }
 
 .hotel-list{
@@ -607,12 +573,13 @@ border-radius: 4px;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px 20px;
 }
+
 .hotel-card{
   padding: 19px;
   margin:0;
-
-
+  list-style-type: none;
 }
+
 .hotel-card-link {
   text-decoration: none;
 }
@@ -675,12 +642,15 @@ border-radius: 4px;
   background-color: #f2f2f2;
   text-transform: uppercase;
 }
+
 .pagination{
   margin: 0 auto;
   padding: 0;
   width: 1060px;
   display:flex;
+  list-style-type: none;
 }
+
 .pagination-item{
   width: 60px;
   text-align: center;
@@ -689,6 +659,7 @@ border-radius: 4px;
   padding: 11.36px 0 12.64px 0;
   border-radius: 4px;
 }
+
 .pagination-item-current{
   background-color: #f2f2f2;
 }
@@ -699,11 +670,9 @@ border-radius: 4px;
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
-
 }
 
 .pagination-link {
-
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
@@ -712,7 +681,6 @@ border-radius: 4px;
 }
 
 .pagination-current {
-
   color: #000000;
 }
 
@@ -720,6 +688,7 @@ border-radius: 4px;
   background-color: #ffffff;
   color: #000000;
 }
+
 .page-footer{
 display: flex;
 padding: 40px 70px 30px 70px;
@@ -730,6 +699,7 @@ width: 100%;
 .footer-social-list {
   display: flex;
   width: 142px;
+  list-style-type: none;
 }
 
 .footer-contacts-phone {
@@ -745,6 +715,7 @@ width: 100%;
 html {
   height: 100%;
 }
+
 .main-container {
   flex-grow: 1;
 }

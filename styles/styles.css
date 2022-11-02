@@ -453,26 +453,34 @@ body {
 }
 
 .catalog-filter{
-  display:flex;
+  display:grid;
+  grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px ;;
 }
 
 .catalog-filter-group{
   margin:0;
   padding:0;
   border: none;
+}
 
+.catalog-filter-house{
+grid-column: 3/4;
+}
+
+.catalog-filter-infrastructure{
+  grid-column: 1/2;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin:  0 32px 0 0;
+  margin: 0 0 32px 0;
   padding: 0;
 }
 
 .catalog-filter-list{
-  margin:0;
+  margin:0 0 -16px 0;
   padding: 0;
   list-style-type: none;
 }
@@ -481,19 +489,22 @@ body {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
-  margin:0;
+  margin:0 0 16px 0;
 
 }
 
 .catalog-filter-price{
-  margin: 0 70px 0 70px;
+  margin: 0;
   width: 288px;
+  grid-column: 5/6;
 }
 
 .button-catalog{
-  padding: 55px 0 0 0;
+  padding: 56px 0 0 0;
   display:flex;
   flex-direction: column;
+  grid-column: 7/8;
+
 }
 
 .button-apply{
@@ -505,11 +516,11 @@ padding: 8px 50px 8px 50px;
 text-transform: uppercase;
 line-height: 20px;
 border-radius: 4px;
+margin: 0 0 32px 0;
 }
 
 .button-reset{
   margin:0;
-  margin-top:40px;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -553,16 +564,19 @@ border-radius: 4px;
   width: 160px;
   margin: 0;
   padding: 0;
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(3, 48px);
+  column-gap: 8px;
 }
 
 .inner-buttons-item{
   margin: 0;
   padding: 0;
-  min-width: 46px;
-  height: 46px;
+  min-width: 48px;
+  height: 48px;
   border: solid 2px #E5E5E5;
   list-style-type: none;
+  border-radius: 4px;
 }
 
 .hotel-list{
@@ -578,10 +592,26 @@ border-radius: 4px;
   padding: 19px;
   margin:0;
   list-style-type: none;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:16px 20px;
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+}
+
+.hotel-card-image{
+display: block;
 }
 
 .hotel-card-link {
   text-decoration: none;
+  grid-column: 1/3;
+  display: block;
+
+}
+.hotel-card-link-name{
+  text-decoration: none;
+  grid-column: 1/3;
 }
 
 .hotel-card-title {
@@ -591,6 +621,7 @@ border-radius: 4px;
   color: #000000;
   padding: 0;
   margin:0;
+  grid-template-columns: 1/3;
 }
 
 .hotel-card-name {
@@ -603,6 +634,7 @@ border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  justify-self: end;
 }
 
 .hotel-card-link-more {
@@ -613,6 +645,8 @@ border-radius: 4px;
   background-color: #756157;
   color: #ffffff;
   text-decoration: none;
+  padding: 8px 26px 8px 26px;
+  border-radius: 4px;
 }
 
 .hotel-card-link-favorites {
@@ -623,6 +657,8 @@ border-radius: 4px;
   background-color: #82b3d3;
   color: #ffffff;
   text-decoration: none;
+  padding: 8px 20px 8px 20px;
+  border-radius:4px ;
 }
 
 .hotel-card-link-favorites-active {
@@ -633,6 +669,8 @@ border-radius: 4px;
   background-color: #7db54f;
   color: #ffffff;
   text-decoration: none;
+  padding:8px 18px 8px 18px ;
+  border-radius: 4px;
 }
 
 .hotel-card-rating {
@@ -641,20 +679,23 @@ border-radius: 4px;
   font-weight: 400;
   background-color: #f2f2f2;
   text-transform: uppercase;
+  padding: 9px 22px 8px 23px;
+  border-radius: 4px;
 }
 
 .pagination{
-  margin: 0 auto;
+  margin: 0 70px 0 70px;
   padding: 0;
-  width: 1060px;
-  display:flex;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+column-gap: 8px;
 }
 
 .pagination-item{
   width: 60px;
   text-align: center;
-  margin-bottom: 8px;
+
   background-color: #82b3d3;
   padding: 11.36px 0 12.64px 0;
   border-radius: 4px;
@@ -668,9 +709,6 @@ border-radius: 4px;
   background-color: #ffffff;
 }
 
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
-}
 
 .pagination-link {
   color: #ffffff;
@@ -685,6 +723,7 @@ border-radius: 4px;
 }
 
 .pagination-devider {
+  font-size: 22px;
   background-color: #ffffff;
   color: #000000;
 }
@@ -697,9 +736,16 @@ width: 100%;
 }
 
 .footer-social-list {
-  display: flex;
-  width: 142px;
+  display: grid;
+  grid-template-columns: repeat(3, 47.33px);
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-item{
+  height: 40px;
+  border: #5d676d solid 2px;
 }
 
 .footer-contacts-phone {
@@ -707,6 +753,7 @@ width: 100%;
   line-height: 40px;
   font-weight: 400;
   color: #000000;
+  display: inline-block;
   text-decoration: none;
   margin:0;
   padding:0;

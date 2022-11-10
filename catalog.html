@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" >
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   </head>
 
   <body>
     <div class="page-wrapper">
       <header class="page-header">
         <nav class="navigation">
-          <a class="navigation-logo" href="#">
+          <a class="navigation-logo" href="index.html">
             <img
               class="page-header-logo"
               src="images/logo.svg"
@@ -23,7 +25,7 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Главная</a>
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
@@ -60,7 +62,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
             </li>
           </ul>
           <h2 class="visually-hidden">Фильтр гостиниц.</h2>
@@ -168,7 +170,6 @@
                       value="0"
                     >
                     <span class="cost-label">от</span>
-                    <span class="cost-background-left"></span>
                   </label>
                   <label class="cost">
                     <input
@@ -178,7 +179,6 @@
                       value="9000"
                     >
                     <span class="cost-label">до</span>
-                    <span class="cost-background-right"></span>
                   </label>
                 </div>
                 <div class="range-scale">
@@ -355,9 +355,9 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <label>
+            <label class="newsletter-label">
               <input
-                class="field"
+                class="newsletter-field"
                 placeholder="Ваш e-mail"
                 type="email"
                 name="newsletter-email"

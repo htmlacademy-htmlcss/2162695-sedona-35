@@ -7,7 +7,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" >
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
@@ -25,7 +25,7 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-activ" href="#"
+              <a class="navigation-link navigation-link-active" href="#"
                 >Главная</a
               >
             </li>
@@ -89,7 +89,7 @@
                 площадь
               </h3>
               <p class="reasons-item-description">
-                Все достопримечательности<br >
+                Все достопримечательности<br>
                 находятся очень близко
               </p>
             </li>
@@ -99,7 +99,7 @@
                 дорога
               </h3>
               <p class="reasons-item-description">
-                Ехать в Седону из Лас-Вегаса<br >
+                Ехать в Седону из Лас-Вегаса<br>
                 совсем не скучно!
               </p>
             </li>
@@ -109,7 +109,7 @@
                 туристов
               </h3>
               <p class="reasons-item-description">
-                Большинство едет в Гранд<br >
+                Большинство едет в Гранд<br>
                 Каньон и толпится там
               </p>
             </li>
@@ -123,7 +123,7 @@
               alt="Мост Дьявола в Седоне."
             >
             <div class="reasons-content">
-              <h3 class="reasons-title">Там есть мост дьявола</h3>
+              <h3 class="reasons-title">Там есть <br> мост дьявола</h3>
               <p class="reasons-card-description">
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
@@ -167,8 +167,8 @@
         <section class="newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-description">
-            Только полезная информация и никакого спама,<br >
-            честное бойскаутское!
+            Только полезная информация и никакого спама,
+            честное&nbsp;бойскаутское!
           </p>
           <form
             class="newsletter-form"
@@ -293,6 +293,7 @@
                   name="appointment-date"
                   value="27 апреля 2020"
                   placeholder="Укажите дату"
+                  required
                 />
                 <p class="error">Мы не можем отправить вас в прошлое.</p>
               </div>
@@ -308,6 +309,7 @@
                   name="departure-date"
                   value="1 сентября 2023"
                   placeholder="Укажите дату"
+                  required
                 />
                 <p class="luck">На эти даты есть свободные номера. Пока есть.</p>
               </div>
@@ -324,6 +326,7 @@
                   type="number"
                   value="2"
                   placeholder="Количество взрослых"
+                  required
                 />
                 <button class="field-button addition" type="button">
                   <span class="visually-hidden">Увеличить количество взрослых.</span>
@@ -353,6 +356,7 @@
                   type="number"
                   value="2"
                   placeholder="Количество детей"
+                  required
                 />
                 <button class="field-button addition" type="button">
                   <span class="visually-hidden">Увеличить количество детей.</span>

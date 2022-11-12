@@ -61,6 +61,7 @@ body {
 
 .reasons-content {
   width: 400px;
+  flex-shrink: 0;
   background-color: #82b3d3;
   color: #ffffff;
   display: flex;
@@ -76,6 +77,12 @@ body {
   align-self: center;
   top: 178px;
   width: 60px;
+}
+
+.reasons-img {
+  min-height: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 .reasons-list {
@@ -128,6 +135,7 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: #333333;
 }
 
 .reasons-list-more {
@@ -480,6 +488,7 @@ body {
   font-weight: 400;
   text-align: center;
   margin: 0;
+  color: #333333;
 }
 
 .reasons-card-description {
@@ -498,6 +507,7 @@ body {
   width: 230px;
   margin: 0;
   padding: 0;
+  color: #333333;
 }
 
 .booking-title {
@@ -515,6 +525,7 @@ body {
   font-weight: 400;
   text-align: center;
   margin: 0 0 54px 0;
+  color: #333333;
 }
 
 .booking {
@@ -531,11 +542,17 @@ body {
   padding: 96px 258px 104px 258px;
   display: flex;
   flex-direction: column;
+  background-color: #5d676d;
 }
 
 .newsletter-inner {
   background-image: none;
+  background-color: #ffffff;
   color: #000000;
+}
+
+.newsletter-inner .newsletter-description {
+  color: #333333;
 }
 
 .newsletter-title {
@@ -683,7 +700,7 @@ body {
 }
 
 .breadcrumbs-link:hover {
- opacity: 0.6;
+  opacity: 0.6;
 }
 
 .breadcrumbs-item {
@@ -1037,6 +1054,7 @@ body {
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: right 17px center;
+  color: #333333;
 }
 
 .select-control:hover {
@@ -1177,6 +1195,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
 }
 
 .hotel-card-price {
@@ -1184,6 +1203,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   justify-self: end;
+  color: #333333;
 }
 
 .hotel-card-link-more {
@@ -1313,6 +1333,7 @@ body {
   text-transform: uppercase;
   padding: 9px 22px 8px 23px;
   border-radius: 4px;
+  color: #333333;
 }
 
 .pagination {
